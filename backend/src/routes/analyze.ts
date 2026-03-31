@@ -67,13 +67,13 @@ router.post("/", async (req: Request, res: Response) => {
       isActive: true,
       location: {
         $nearSphere: {
-          $geometry:    { type: "Point", coordinates: [lng, lat] },
+          $geometry: { type: "Point", coordinates: [lng, lat] },
           $maxDistance: radiusKm * 1000,
         },
       },
     })
       .limit(8)
-      .lean() as IMandi[];
+      .lean() as unknown as IMandi[];
 
     if (mandis.length === 0) {
       res.status(404).json({ success: false, error: "No mandis found within radius" });
