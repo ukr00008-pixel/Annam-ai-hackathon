@@ -31,7 +31,7 @@ krishi-route-ts/                    ← GitHub repo root
 │
 ├── frontend/                    ← 🖥️  Frontend (React + Vite + TypeScript)
 │   ├── public/
-    |     |──index.html
+|   |     |──index.html
 │   ├── vite.config.ts
 │   ├── tsconfig.json
 │   ├── tsconfig.node.json
